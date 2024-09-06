@@ -141,9 +141,10 @@ body {
   font-family: "Gellix";
   margin: 0;
   padding: 0;
+  color: $white;
   background-color: #041e42;
   font-size: 16px;
-  line-height: 1.65;
+  line-height: 1.5;
 }
 
 h1,
@@ -214,14 +215,28 @@ h2 {
   font-weight: 500;
 }
 
+h3 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+h4 {
+  font-size: 28px;
+  line-height: 120%;
+  font-weight: 600;
+}
+
 .btn {
   position: relative;
-  font-size: 24px;
+  font-size: 12px;
   line-height: 1;
-  padding: 20px 48px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 9px 12px;
   text-align: center;
   outline: none;
-  border-radius: 17px;
+  border-radius: 0;
   text-decoration: none;
   display: inline-block;
   transition: 0.3s all ease;
@@ -232,10 +247,10 @@ h2 {
     border-radius: 8px;
   }
 
-  &-red {
+  &-blue {
     color: $white;
-    background-color: $red;
-    border-color: $red;
+    background-color: rgb(0, 70, 128);
+    border-color: rgb(0, 70, 128);
 
     &:hover {
       color: $white;
@@ -321,7 +336,7 @@ h2 {
 
           &:hover,
           &.active {
-            // color: $red;
+            color: #00d9ef;
           }
         }
       }
@@ -335,7 +350,7 @@ h2 {
   &__inner {
     position: relative;
     padding: 60px 0 0;
-    height: calc(100vh - 289px);
+    height: 100vh;
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -375,7 +390,7 @@ h2 {
   &__content {
     width: 100%;
     max-width: 720px;
-    padding: 75px 60px 60px 180px;
+    padding: 75px 60px 60px 9.375vw;
     background: #27aae1;
     background: linear-gradient(7deg, #00b1da -10%, #00d9ef 110%);
     color: #041e42;
@@ -414,20 +429,137 @@ h2 {
       }
     }
   }
+}
 
-  // .bg-fade {
-  //   height: 120px;
-  //   opacity: 0.1;
-  //   background: linear-gradient(-90deg, rgba(39, 170, 225, 0.5), rgba(0, 0, 0, 0) 70%);
+.our-story {
+  position: relative;
+  padding: 60px 0;
 
-  //   &::after {
-  //     content: "";
-  //     display: block;
-  //     height: 80px;
-  //     -webkit-transform: translateY(0);
-  //     -ms-transform: translateY(0);
-  //     transform: translateY(0);
-  //     background: linear-gradient(90deg, rgba(39, 170, 225, 0.5) 30%, rgba(0, 0, 0, 0));
-  //   }
-  // }
+  .container {
+    max-width: 1202px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  &__media {
+    .image-ratio {
+      padding-top: 51.29%;
+    }
+  }
+}
+
+.image-with-content {
+  position: relative;
+  padding: 60px 0;
+
+  &__inner {
+    position: relative;
+  }
+
+  &__image {
+    max-width: calc(100% - 150px);
+  }
+
+  &__content {
+    width: 100%;
+    max-width: 720px;
+    padding: 75px 9.375vw 60px 60px;
+    background: #27aae1;
+    background: linear-gradient(7deg, #00b1da -10%, #00d9ef 110%);
+    color: #041e42;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    h6 {
+      margin-bottom: 12px;
+    }
+
+    h3 {
+      color: $white;
+      margin-bottom: 20px;
+    }
+
+    .btn-wrapper {
+      margin-top: 16px;
+      width: 100%;
+      max-width: 350px;
+
+      .btn {
+        display: block;
+      }
+    }
+  }
+
+  &.reverse-it {
+    .image-with-content__image {
+      margin-left: auto;
+    }
+
+    .image-with-content__content {
+      left: 0;
+      right: auto;
+      padding: 75px 60px 60px 9.375vw;
+    }
+  }
+}
+
+.our-news {
+  position: relative;
+  padding: 60px 0;
+
+  .container {
+    max-width: 1202px;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+
+    h6 {
+      margin-bottom: 6px;
+    }
+
+    h2 {
+      font-size: 40px;
+      font-weight: 600;
+      line-height: 120%;
+      color: rgb(0, 169, 206);
+    }
+  }
+
+  &__all {
+  }
+}
+
+.news-card {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  .text-wrapper {
+    h4 {
+      margin-bottom: 12px;
+      color: rgb(0, 169, 206);
+    }
+
+    .link-wrapper {
+      margin-top: 24px;
+
+      a {
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: rgb(0, 169, 206);
+      }
+    }
+  }
 }
